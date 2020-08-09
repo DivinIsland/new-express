@@ -4,7 +4,7 @@ const db_config = {
   user: "root",
   password: "root",
   port: 3306,
-  database: "express_movie_app",
+  database: "test",
   insecureAuth: false,
 };
 
