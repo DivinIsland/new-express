@@ -3,12 +3,26 @@
 
 <head>
   <title><%= title %></title>
-  <link rel='stylesheet' href='/css/style.css' />
+  <%- include("./common/head.ejs") %>
+  <link rel='stylesheet' href='/css/index.css' />
 </head>
 
 <body>
-  <h1><%= title %></h1>
-  <p>Welcome to <%= title %></p>
+  <div class="jumbotron text-center">
+    <h1><%= title %></h1>
+  </div>
+  <%- include("./common/header.ejs"); %>
+
+
+  <div class="banner_box">
+    <img src="img/busan.jpg" class="banner">
+  </div>
+
+
+
+
+
+  <%- include("./common/foot.ejs") %>
 </body>
 
 </html>
