@@ -17,7 +17,7 @@ router.post("/api/signup", async (req, res, next) => {
     if (rows.affectedRows === 1) {
       res.json({ result: 1 });
     }
-  } catch {
+  } catch (err) {
     res.json({ result: 2 });
   }
 });
@@ -52,7 +52,7 @@ router.post("/api/signout", async (req, res, next) => {
     if (rows.affectedRows === 1) {
       res.json({ result: 1, name });
     }
-  } catch {
+  } catch (err) {
     res.json({ result: 2 });
   }
 });
