@@ -36,13 +36,15 @@ router.post("/api/write", isLoggedMiddleWare, async (req, res, next) => {
   const contentSeq = uuid4().replace(/\-/g, "");
   const createAt = moment().unix();
 
-  const rows = await database.query(`
+  try {
+    const rows = await database.query(`
   INSERT INTO test.board (author, title, content, contentSeq, createAt) VALUES ("${name}","${title}","${content}","${contentSeq}","${createAt}")
   `);
 
-  if (rows.affectedRows === 1) {
-    res.json({ result: 1 });
-  } else {
+    if (rows.affectedRows === 1) {
+      res.json({ result: 1 });
+    }
+  } catch (err) {
     res.json({ result: 2 });
   }
 });
