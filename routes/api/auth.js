@@ -8,13 +8,11 @@ const uuid4 = v4;
 router.post("/api/signup", async (req, res, next) => {
   const { name, email, password } = req.body;
   const userCode = uuid4().replace(/\-/g, "");
-  console.log(name, email, password, userCode, "db query data");
 
   try {
     const rows = await database.query(`
     INSERT INTO test.auth (name, email, password, userCode) VALUES ("${name}","${email}","${password}","${userCode}")
     `);
-    console.log(rows, "rows");
 
     if (rows.affectedRows === 1) {
       res.json({ result: 1 });
