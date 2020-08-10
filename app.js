@@ -8,7 +8,7 @@ const session = require("express-session");
 
 var indexRouter = require("./routes/index");
 var authRouter = require("./routes/api/auth");
-var boardRouter = require("./routes/board");
+var boardRouter = require("./routes/api/board");
 
 var app = express();
 
