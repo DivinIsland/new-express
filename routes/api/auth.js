@@ -25,21 +25,18 @@ router.post("/api/signup", async (req, res, next) => {
 router.post("/api/signin", async (req, res, next) => {
   const { email, password } = req.body;
 
-  try {
-    const rows = await database.query(`
+  const rows = await database.query(`
     SELECT * FROM test.auth WHERE email="${email}" AND password="${password}"
     `);
-
-    if (rows.length) {
-      req.session.isLogged = true;
-      req.session.profile = {
-        email: rows[0].email,
-        name: rows[0].name,
-        userCode: rows[0].userCode,
-      };
-      res.json({ result: 1, name: rows[0].name });
-    }
-  } catch {
+  if (rows.length) {
+    req.session.isLogged = true;
+    req.session.profile = {
+      email: rows[0].email,
+      name: rows[0].name,
+      userCode: rows[0].userCode,
+    };
+    res.json({ result: 1, name: rows[0].name });
+  } else {
     res.json({ result: 2 });
   }
 });
