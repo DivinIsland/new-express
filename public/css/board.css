@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box;
+}
+
+.function_area {
+  text-align: right;
+  margin-top: 10px;
+  margin-right: 20px;
+}
+
+.write_area {
+  width: 50%;
+  margin: auto;
+  margin-top: 80px;
+  text-align: center;
+}
+
+.show_area {
+  margin-top: 50px;
+}
+
+.line {
+  margin-top: 10px;
+  border: 2px solid rgba(128, 128, 128, 0.3);
+  font-family: courgette;
+  font-size: 18px;
+}
+
+.index_line {
+  font-family: Cardo;
+  font-size: 20px;
+  font-weight: bold;
+}

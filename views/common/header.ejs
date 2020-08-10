@@ -1,0 +1,22 @@
+<style>
+  .nav_bar {
+    text-align: right;
+    margin-right: 20px;
+  }
+</style>
+
+<div class="nav_bar">
+  <a href="/" class="btn btn-default">Home</a>
+  <% if(sess.isLogged) { %>
+  <a href="/mypage" class="btn btn-default">My Page</a>
+  <a href="/logout" class="btn btn-default" id="logoutBtn">Log Out</a>
+  <a href="/board" class="btn btn-default">Board</a>
+
+  <% }else { %>
+  <a href="/signin" class="btn btn-default">Sign In</a>
+  <a href="/Signup" class="btn btn-default">Sign Up</a>
+
+  <% } %>
+
+
+</div>
