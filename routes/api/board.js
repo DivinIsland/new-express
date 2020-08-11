@@ -58,12 +58,14 @@ router.post("/api/delete", isLoggedMiddleWare, async (req, res, next) => {
     })
     .join(",");
 
-  const rows = await database.query(`
+  try {
+    const rows = await database.query(`
   DELETE FROM test.board WHERE contentSeq IN (${newList})`);
 
-  if (rows.affectedRows) {
-    res.json({ result: 1 });
-  } else {
+    if (rows.affectedRows) {
+      res.json({ result: 1 });
+    }
+  } catch (err) {
     res.json({ result: 2 });
   }
 });
