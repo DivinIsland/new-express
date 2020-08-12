@@ -7,22 +7,160 @@
   <link rel='stylesheet' href='/css/index.css' />
 </head>
 
-<body>
-  <div class="jumbotron text-center">
-    <h1><%= title %></h1>
+<header class="header wrap">
+
+
+  <span class="author">Projection </span>by Divinisland</span>
+
+  <div class="nav">
+    <a href="/" class="link">Home</a>
+    <a href="/signin" class="link">Sign in</a>
+    <a href="/signup" class="link">Sign up</a>
   </div>
-  <%- include("./common/header.ejs"); %>
+
+  <hr>
+
+</header>
+
+<section class="intro">
+
+  <div class="inner">
+    <h1 class="title_intro">Divinisland's Portfolio</h1>
+
+    <div class="stack">
+      <div class="stack_item">
+        <a href="#htmlSection" class="stack_link"><i class="fab fa-html5"></i>
+          <i class="fab fa-css3-alt"></i>
+        </a>
+      </div>
+      <div class="stack_item">
+        <a href="#jsSection" class="stack_link">
+          <i class="fab fa-js"></i>
+        </a>
+      </div>
+      <div class="stack_item">
+        <a href="#expressSection" class="stack_link">
+          <i class="fab fa-node"></i>
+        </a>
+      </div>
+    </div>
+  </div>
 
 
-  <div class="banner_box">
-    <img src="img/busan.jpg" class="banner">
+</section>
+
+<section class="html_css" id="htmlSection">
+  <div class="wrap">
+    <h1 class="text-center title">HTML5 / CSS3</h1><br><br>
+    <hr>
+
+    <h2 class="text-center">Templates</h2>
+
+    <div class="content_row">
+      <div class="content">
+        <a href="https://cyg-wp-case2.netlify.app/" class="content_link"><img src="/img/wp/wp1.png" alt=""
+            class="content_img"></a>
+      </div>
+      <div class="content">
+        <a href="https://cyg-wp-case1.netlify.app/" class="content_link"><img src="/img/wp/wp2.png" alt=""
+            class="content_img"></a>
+      </div>
+    </div>
+    <br><br><br>
+
+    <hr>
+
+    <br><br>
+    <h2 class="text-center">Clone Coding</h2>
+    <div class="clone_content">
+      <a href="https://cyg-wp-case3.netlify.app/" class="content_link">
+        <img src="/img/wp/wp3.png" alt="" class="clone"></a>
+    </div>
+    <br><br>
+    <hr>
   </div>
 
 
 
 
+</section>
 
-  <%- include("./common/foot.ejs") %>
+<section class="js" id="jsSection">
+  <div class="wrap">
+
+    <h1 class="text-center title">JavaScript</h1><br><br>
+    <hr class="boundary">
+    <br><br>
+
+    <div class="js_content_row">
+      <div class="js_row">
+        <div class="img_box">
+          <a href="https://cyg-js-15.netlify.app/" class="content_link">
+            <img src="/img/js/cafe.jpg" alt="" class="js_img">
+          </a>
+        </div>
+        <div class="img_text">
+          <span>Cafe</span>
+        </div>
+      </div>
+      <div class="js_row">
+        <div class="img_box">
+          <a href="https://cyg-js-01.netlify.app/" class="content_link">
+            <img src="/img/js/lotto.jpg" alt="" class="js_img">
+          </a>
+        </div>
+        <div class="img_text">
+          <span>Lotto</span>
+        </div>
+      </div>
+      <div class="js_row">
+        <div class="img_box">
+          <a href="https://cyg-js-08.netlify.app/" class="content_link">
+            <img src="/img/js/todo.jpg" alt="" class="js_img">
+          </a>
+        </div>
+        <div class="img_text">
+          <span>ToDo</span>
+        </div>
+      </div>
+    </div>
+
+
+    <hr class="boundary">
+  </div>
+
+</section>
+
+<section class="express" id="expressSection">
+  <div class="wrap">
+    <h1 class="text-center title">Express</h1><br><br>
+    <hr>
+
+    <p>- WebPublishing + JS + MySQL + Express + AWS-EC2</p>
+
+    <p>- Backend와의 코옵을 위해 공부한 express 프로젝트.</p>
+
+    <p>- AWS-EC2 를 이용한 배포.</p>
+
+    <p>- 주요 사용 모듈 : MySQL2, Axios, express, uuid, cors, nodemon, session, pm2</p>
+
+    <br>
+
+    <p>- Frontend 구현 </p>
+
+    <p>-Auth : 회원가입, 로그인, 로그아웃, 회원탈퇴, 마이페이지</p>
+
+    <p>-Board : C R U D</p>
+
+
+
+  </div>
+</section>
+
+
+
+
+<%- include("./common/foot.ejs") %>
 </body>
 
 </html>
