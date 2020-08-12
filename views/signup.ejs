@@ -8,14 +8,12 @@
 </head>
 
 <body>
-  <div class="jumbotron text-center">
-    <h1><%= title %></h1>
-  </div>
-  <%- include("./common/header.ejs"); %>
 
-  <div class="container">
-    <div class="wrap">
-      <div class="signin_area">
+  <%- include("./common/header.ejs") %>
+
+  <div class="wrap">
+    <div class="signup_box">
+      <div class="signup_area">
         <input type="text" placeholder="Name" id="inputName" class="form-control"><br>
         <input type="text" placeholder="E-mail" id="inputEmail" class="form-control"><br>
         <input type="password" placeholder="Password" id="inputPassword" class="form-control"><br>
@@ -28,8 +26,11 @@
 
 
 
+
+
+
   <%- include("./common/foot.ejs") %>
-  <script src="/js/signup.js"></script>
+  <script src="js/signup.js"></script>
 </body>
 
 </html>

@@ -1,22 +1,36 @@
 <style>
-  .nav_bar {
-    text-align: right;
-    margin-right: 20px;
+  .nav {
+    position: absolute;
+    right: 0;
+    display: inline-block;
+
+  }
+
+  .link {
+    padding: 0 8px;
+    color: white;
+    font-size: 30px;
+
+  }
+
+  a:hover {
+    text-decoration: none;
+    color: white;
+    opacity: 0.5;
   }
 </style>
 
-<div class="nav_bar">
-  <a href="/" class="btn btn-default">Home</a>
+<div class="nav">
+  <a href="/" class="link">Home</a>
   <% if(sess.isLogged) { %>
-  <a href="/mypage" class="btn btn-default">My Page</a>
-  <a href="/logout" class="btn btn-default" id="logoutBtn">Log Out</a>
-  <a href="/board" class="btn btn-default">Board</a>
+  <a href="/mypage" class="link">My Page</a>
+  <a href="/logout" class="link" id="logoutBtn">Log Out</a>
+  <a href="/board" class="link">Board</a>
 
   <% }else { %>
-  <a href="/signin" class="btn btn-default">Sign In</a>
-  <a href="/Signup" class="btn btn-default">Sign Up</a>
+  <a href="/signin" class="link">Sign In</a>
+  <a href="/Signup" class="link">Sign Up</a>
 
   <% } %>
-
 
 </div>

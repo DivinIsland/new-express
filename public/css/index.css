@@ -5,7 +5,6 @@
 body {
   height: 100vh;
   font-family: Cardo;
-
 }
 
 .wrap {
@@ -15,38 +14,24 @@ body {
 
 .header {
   position: relative;
-
   padding-top: 50px;
   font-size: 20px;
   color: white;
   z-index: 2;
-
 }
 
 .author {
   display: inline-block;
 }
 
-.nav {
-  position: absolute;
-  right: 0;
-  display: inline-block;
 
-
-}
-
-.link {
-  padding: 0 8px;
-  color: white;
-
-}
 
 .bold {
   font-weight: bold;
 }
 
 .intro::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -61,11 +46,10 @@ body {
 
 .intro {
   min-height: 600px;
-
 }
 
 .intro::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -73,7 +57,7 @@ body {
   bottom: 0;
   height: 800px;
   background-color: RGB(69, 69, 84);
-  opacity: .7;
+  opacity: 0.7;
   z-index: -5;
 }
 
@@ -95,28 +79,22 @@ body {
   width: 25%;
   font-size: 100px;
   text-align: center;
-
 }
 
 .fa-slash {
   font-size: 30px;
 }
 
-a:hover {
-  text-decoration: none;
-  color: white;
-  opacity: .5;
 
-}
 
 .stack_link {
   color: RGB(108, 192, 145);
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .stack_link:hover {
   color: RGB(108, 192, 145);
-  opacity: .6;
+  opacity: 0.6;
 }
 
 .html_css,
@@ -125,18 +103,14 @@ a:hover {
   min-height: 900px;
 }
 
-
-
 .html_css {
   padding-top: 100px;
   padding-bottom: 100px;
-
 }
 
 .title {
   font-size: 80px;
 }
-
 
 .js {
   background-color: #f1f1f1;
@@ -145,24 +119,21 @@ a:hover {
 .content_row {
   display: flex;
   justify-content: space-around;
-
 }
 
 .content {
   width: 50%;
   margin-top: 20px;
   text-align: center;
-
 }
 
 .content_img {
   width: 60%;
   height: 630px;
-
 }
 
 .content_link {
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .clone_content {
@@ -194,13 +165,10 @@ a:hover {
   text-align: center;
 }
 
-.img_box {}
-
 .js_img {
   border-radius: 100%;
   width: 300px;
   height: 300px;
-
 }
 
 .img_text {
