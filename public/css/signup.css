@@ -7,7 +7,6 @@ body {
   width: 80%;
   margin: auto;
   height: 100vh;
-
   display: flex;
 }
 
@@ -17,7 +16,7 @@ body {
   width: 30%;
   text-align: center;
   margin: auto;
-  align-self: center;
+
   background-color: white;
   min-height: 400px;
   display: flex;
@@ -29,6 +28,6 @@ body {
 .signup_area {
   width: 70%;
   margin: auto;
-  align-self: center;
+
 
 }
