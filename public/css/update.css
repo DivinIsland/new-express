@@ -1,0 +1,24 @@
+body {
+  height: 100vh;
+}
+
+.header {
+  background-color: #2d3e52;
+  min-height: 50px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 50;
+  right: 0;
+}
+
+.container_box {
+  display: flex;
+  height: inherit;
+  background-image: linear-gradient(272deg, #e1375e, #d18754, #b6c043, #82f320);
+}
+
+.wrap {
+  width: 50%;
+  margin: auto;
+}

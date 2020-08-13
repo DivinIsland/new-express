@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title><%= title %></title>
+  <%- include("./common/head.ejs") %>
+  <link rel='stylesheet' href='/css/update.css' />
+</head>
+
+<body>
+
+  <div class="header">
+    <%- include("./common/header.ejs") %>
+  </div>
+
+
+  <div class="container_box">
+    <div class="wrap">
+      <div class="write_area">
+        <input type="text" id="inputTitle" class="form-control" placeholder="Title" value="<%= body.title %>"><br>
+        <textarea name="" id="inputContent" cols="30" rows="10" class="form-control"
+          placeholder="Content"><%= body.content %></textarea><br>
+        <button class="btn btn-warning form-control" id="updateBtn">Update</button>
+      </div>
+    </div>
+  </div>
+
+  <%- include("./common/foot.ejs") %>
+  <script src="/js/update.js"></script>
+</body>
+
+</html>

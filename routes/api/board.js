@@ -66,4 +66,27 @@ router.post("/api/delete", isLoggedMiddleWare, async (req, res, next) => {
   }
 });
 
+//NOTE: board update rendering router.
+router.get("/update", isLoggedMiddleWare, async (req, res, next) => {
+  const { contentSeq } = req.query;
+
+  try {
+    const rows = await database.query(`
+    SELECT * FROM test.board WHERE contentSeq="${contentSeq}" `);
+
+    if (rows.length) {
+      const rowData = rows[0];
+      const body = {
+        title: rowData.title,
+        content: rowData.content,
+      };
+
+      console.log(body, rows);
+
+      res.render("update", { title: "Update", body });
+    }
+  } catch (err) {
+    console.log("fail");
+  }
+});
 module.exports = router;
