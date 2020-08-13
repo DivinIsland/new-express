@@ -79,6 +79,7 @@ router.get("/update", isLoggedMiddleWare, async (req, res, next) => {
       const body = {
         title: rowData.title,
         content: rowData.content,
+        contentSeq,
       };
 
       console.log(body, rows);
@@ -87,6 +88,23 @@ router.get("/update", isLoggedMiddleWare, async (req, res, next) => {
     }
   } catch (err) {
     console.log("fail");
+  }
+});
+
+//NOTE: board update api router.
+router.post("/api/update", isLoggedMiddleWare, async (req, res, next) => {
+  const { title, content, contentSeq } = req.body;
+
+  try {
+    const rows = await database.query(`
+UPDATE test.board SET title="${title}", content="${content}" WHERE contentSeq="${contentSeq}"
+`);
+
+    if (rows.affectedRows) {
+      res.json({ result: 1 });
+    }
+  } catch (err) {
+    res.json({ result: 2 });
   }
 });
 module.exports = router;

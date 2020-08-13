@@ -32,6 +32,10 @@ body {
   text-align: right;
 }
 
+.crud {
+  width: 70px;
+}
+
 .write_area {
   width: 50%;
   margin: auto;
