@@ -4,20 +4,23 @@
 <head>
   <title><%= title %></title>
   <%- include("./common/head.ejs") %>
-  <link rel='stylesheet' href='/css/board.css' />
+  <link rel='stylesheet' href='/css/write.css' />
 </head>
 
 <body>
-  <div class="jumbotron text-center">
-    <h1><%= title %></h1>
-  </div>
-  <%- include("./common/header.ejs") %>
 
-  <div class="container">
-    <div class="write_area">
-      <input type="text" id="inputTitle" class="form-control" placeholder="Title">;
-      <textarea name="" id="inputContent" cols="30" rows="10" class="form-control" placeholder="Content"></textarea><br>
-      <button class="btn btn-success form-control" id="writeBtn">Write</button>
+  <div class="header">
+    <%- include("./common/header.ejs") %>
+  </div>
+
+  <div class="container_box">
+    <div class="wrap">
+      <div class="write_area">
+        <input type="text" id="inputTitle" class="form-control" placeholder="Title"><br>
+        <textarea name="" id="inputContent" cols="30" rows="10" class="form-control"
+          placeholder="Content"></textarea><br>
+        <button class="btn btn-success form-control" id="writeBtn">Write</button>
+      </div>
     </div>
   </div>
 

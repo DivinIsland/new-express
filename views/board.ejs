@@ -24,10 +24,12 @@
           <div class="col-md-3 text-center">Title</div>
           <div class="col-md-3 text-center">Content</div>
           <div class="col-md-3 text-center">Date</div>
+          <hr>
         </div>
+
         <% boardList.map(item=>{ %>
         <div class="row line">
-          <div class="col-md-1"><input type="checkbox" data-name="<%= item.contentSeq %>"></div>
+          <div class="col-md-1"><input class="check_props" type="checkbox" data-name="<%= item.contentSeq %>"></div>
           <div class="col-md-2 text-center"><%= item.author %></div>
           <div class="col-md-3 text-center"><%= item.title %></div>
           <div class="col-md-3 text-center"><%= item.content %></div>

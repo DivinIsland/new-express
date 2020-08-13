@@ -4,6 +4,7 @@
 
 body {
   height: 100vh;
+  background-color: #f1f1f1;
 }
 
 .wrap {
@@ -43,6 +44,7 @@ body {
 }
 
 .line {
+  display: block;
   margin-top: 10px;
   border: 2px solid rgba(128, 128, 128, 0.3);
   font-family: courgette;
@@ -53,4 +55,9 @@ body {
   font-family: Cardo;
   font-size: 20px;
   font-weight: bold;
+}
+
+.check_props {
+  width: 15px;
+  height: 15px;
 }
