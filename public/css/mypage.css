@@ -19,10 +19,6 @@
   right: 0;
 }
 
-.bg {
-  /* border: 1px solid gray; */
-}
-
 body {
   height: 100vh;
   background-color: #f1f1f1;
@@ -38,14 +34,13 @@ body {
   margin: auto;
   display: flex;
   justify-content: space-between;
-
 }
 
 .user,
 .message {
   width: 48%;
   min-height: 500px;
-  text-align: center;
+
   margin: auto;
 }
 
@@ -53,24 +48,78 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
-
-
 }
 
 .message {
   background-color: white;
-
+  position: relative;
 }
 
 .user_info {
   min-height: 150px;
   background-color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 
 }
 
 .user_contact {
   min-height: 300px;
   background-color: white;
+  position: relative;
+}
 
+.my_img {
+  width: 100px;
+  height: 100px;
+}
+
+.my_img_name {
+  width: 65%;
+  text-align: center;
+  font-size: 30px;
+  font-family: "Gothic A1";
+}
+
+.user_icon {
+  font-size: 40px;
+  padding: 20px;
+  color: RGB(145, 216, 251);
+}
+
+.message_text {
+  font-size: 50px;
+  text-align: center;
+  font-family: Amiri;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.user_contact_info {
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  top: 60%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.contact_info {
+
+  width: 49%;
+  height: 60px;
+  font-size: 20px;
+  border: 4px solid rgba(145, 216, 251, 0.5);
+  margin-bottom: 10px;
+
+  padding: 5px;
+}
+
+.user_code {
+  width: 100%;
 }

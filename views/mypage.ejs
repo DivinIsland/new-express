@@ -18,11 +18,27 @@
     <div class="wrap bg">
 
       <div class="user bg">
-        <div class="user_info">123</div>
-        <div class="user_contact">123</div>
+        <div class="user_info">
+          <img src="/img/myimg.jpg" alt="" class="my_img">
+          <h3 class="my_img_name">최율겸</h3>
+
+        </div>
+        <div class="user_contact">
+          <div><i class="fas fa-mobile-alt user_icon"></i></div>
+          <div class="user_contact_info">
+            <div class="contact_info">이름 : <%= sess.profile.name %></div>
+            <div class="contact_info">이메일 : <%= sess.profile.email %></div>
+            <div class="contact_info user_code">유저코드 : <%= sess.profile.userCode %></div>
+            <div class="signout_area">
+              <button class="btn btn-danger" id="signoutBtn">Sign Out</button>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div class="message bg">
+        <div><i class="fas fa-comments user_icon"></i></div>
+        <div class="message_text">Coming soon</div>
 
       </div>
 
@@ -44,9 +60,7 @@
       <div>유저코드 : <%= sess.profile.userCode %></div>
     </div>
 
-    <div class="signout_area">
-      <button class="btn btn-danger" id="signoutBtn">Sign Out</button>
-    </div>
+    
   </div> -->
 
 
