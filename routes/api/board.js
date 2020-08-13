@@ -17,10 +17,6 @@ router.get("/", isLoggedMiddleWare, async (req, res, next) => {
     };
   });
 
-  boardList.forEach((item) => {
-    console.log(item, "item");
-  });
-
   res.render("board", { title: "Board", boardList });
 });
 

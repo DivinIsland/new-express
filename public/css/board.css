@@ -2,10 +2,33 @@
   box-sizing: border-box;
 }
 
+body {
+  height: 100vh;
+}
+
+.wrap {
+  width: 85%;
+  margin: auto;
+}
+
+.header {
+  background-color: #2d3e52;
+  min-height: 50px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 50;
+  right: 0;
+}
+
+.container_box {
+  padding-top: 50px;
+}
+
+
 .function_area {
+  margin-top: 20px;
   text-align: right;
-  margin-top: 10px;
-  margin-right: 20px;
 }
 
 .write_area {

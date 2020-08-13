@@ -8,36 +8,57 @@
 </head>
 
 <body>
-  <div class="jumbotron text-center">
-    <h1><%= title %></h1>
-  </div>
-  <%- include("./common/header.ejs"); %>
-  <div class="function_area">
-    <a href="/board/write" class="btn btn-warning">Write</a>
-    <button class="btn btn-danger" id="deleteBtn">Delete</button>
+
+  <header class="header">
+    <%- include("./common/header.ejs"); %>
+  </header>
+
+  <div class="container_box">
+
+    <div class="wrap">
+
+      <div class="show_area" id="target">
+        <div class="row index_line">
+          <div class="col-md-1">Check</div>
+          <div class="col-md-2 text-center">Author</div>
+          <div class="col-md-3 text-center">Title</div>
+          <div class="col-md-3 text-center">Content</div>
+          <div class="col-md-3 text-center">Date</div>
+        </div>
+        <% boardList.map(item=>{ %>
+        <div class="row line">
+          <div class="col-md-1"><input type="checkbox" data-name="<%= item.contentSeq %>"></div>
+          <div class="col-md-2 text-center"><%= item.author %></div>
+          <div class="col-md-3 text-center"><%= item.title %></div>
+          <div class="col-md-3 text-center"><%= item.content %></div>
+          <div class="col-md-3 text-center"><%= item.stringCreateAt %></div>
+        </div>
+        <% }) %>
+      </div>
+    </div>
+
   </div>
 
-  <div class="container">
-    <div class="show_area" id="target">
-      <div class="row index_line">
-        <div class="col-md-1">Check</div>
-        <div class="col-md-2 text-center">Author</div>
-        <div class="col-md-3 text-center">Title</div>
-        <div class="col-md-3 text-center">Content</div>
-        <div class="col-md-3 text-center">Date</div>
-      </div>
-      <% boardList.map(item=>{ %>
-      <div class="row line">
-        <div class="col-md-1"><input type="checkbox" data-name="<%= item.contentSeq %>"></div>
-        <div class="col-md-2 text-center"><%= item.author %></div>
-        <div class="col-md-3 text-center"><%= item.title %></div>
-        <div class="col-md-3 text-center"><%= item.content %></div>
-        <div class="col-md-3 text-center"><%= item.stringCreateAt %></div>
-      </div>
-      <% }) %>
+
+  </div>
+
+
+
+
+
+
+  <div class="wrap">
+
+    <div class="function_area">
+      <a href="/board/write" class="btn btn-success crud">Write</a>
+      <button class="btn btn-danger crud" id="deleteBtn">Delete</button>
+      <button class="btn btn-warning crud" id="updateBtn">Update</button>
+
     </div>
   </div>
-  </div>
+
+
+
 
 
 
