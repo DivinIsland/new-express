@@ -29,7 +29,8 @@
 
         <% boardList.map(item=>{ %>
         <div class="row line">
-          <div class="col-md-1"><input class="check_props" type="checkbox" data-name="<%= item.contentSeq %>"></div>
+          <div class="col-md-1"><input class="check_props" type="checkbox" data-name="<%= item.contentSeq %>"
+              data-author="<%= sess.profile.name %>" data-written="<%= item.author %>"></div>
           <div class="col-md-2 text-center"><%= item.author %></div>
           <div class="col-md-3 text-center"><%= item.title %></div>
           <div class="col-md-3 text-center"><%= item.content %></div>
