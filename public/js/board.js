@@ -3,17 +3,20 @@ const target = el("target");
 const updateBtn = el("updateBtn");
 
 const dataList = new Set();
-const authorCheck = new Map();
+const checkWritten = [];
+const checkAuthor = [];
 
 target.addEventListener("click", (e) => {
   const target = e.target;
 
   if (target.checked) {
     dataList.add(target.dataset.name);
-    authorCheck.set(target.dataset.written, target.dataset.author);
+    checkWritten.push(target.dataset.written);
+    checkAuthor.push(target.dataset.author);
   } else {
     dataList.delete(target.dataset.name);
-    authorCheck.delete(target.dataset.written);
+    checkWritten.pop();
+    checkAuthor.pop();
   }
 });
 
@@ -36,15 +39,15 @@ deleteBtn.addEventListener("click", () => {
 updateBtn.addEventListener("click", () => {
   const updateList = [...dataList];
   const contentSeq = updateList[0];
-  const isTrueAuthor = [...authorCheck][0];
+  const isAuthorTrue = checkWritten[0] === checkAuthor[0];
 
   if (updateList.length === 1) {
-    if (isTrueAuthor[0] === isTrueAuthor[1]) {
+    if (isAuthorTrue) {
       window.location.href = `/board/update?contentSeq=${contentSeq}`;
     } else {
       alert("본인의 글만 수정 가능합니다.");
     }
   } else {
-    alert("수정은 1개씩 가능합니다.");
+    alert("수정은 1개만 가능합니다.");
   }
 });
